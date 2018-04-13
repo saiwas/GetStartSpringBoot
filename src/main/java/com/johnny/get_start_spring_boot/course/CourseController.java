@@ -3,7 +3,6 @@ package com.johnny.get_start_spring_boot.course;
 import java.util.List;
 
 import com.johnny.get_start_spring_boot.topic.Topic;
-import com.johnny.get_start_spring_boot.topic.TopicService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,7 +16,6 @@ public class CourseController {
 
   @Autowired
   private CourseService courseService;
-  private TopicService topicService;
 
   @RequestMapping("/topics/{topicId}/courses")
   public List<Course> getAllCourses(@PathVariable String topicId) {
